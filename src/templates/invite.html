@@ -1,0 +1,44 @@
+---
+bodyClass: bg-slate-50
+---
+
+<x-main>
+  <div class="bg-slate-50 sm:px-4 font-sans">
+    <table align="center">
+      <tr>
+        <td class="w-[552px] max-w-full">
+          <div class="my-12 sm:my-8 text-center">
+
+          </div>
+
+          <table class="w-full">
+            <tr>
+              <td class="p-12 sm:px-6 text-base text-slate-700 bg-white rounded shadow-sm">
+                <h1 class="m-0 mb-6 text-2xl sm:leading-8 text-black font-semibold" th:text=" 'Hello ' + ${name} + ', ' "></h1>
+
+                <p class="m-0 leading-6">
+                  <br>
+                   <p th:text="${emailContent}"></p>
+                </p>
+
+                <x-spacer height="24px" />
+
+                <x-divider space-y="32px" class="bg-slate-200" />
+
+                <p class="m-0">
+                  <br>
+                  <p th:text=" 'If you did not sign up for ' + ${companyName} + ', you can safely ignore this email.' " ></p>
+                  <br>
+                  Thanks, 
+                  <br />
+                  <p th:text=" 'The ' + ${companyName} + ' Team' "></p> 
+                </p>
+              </td>
+            </tr>
+            
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</x-main>
